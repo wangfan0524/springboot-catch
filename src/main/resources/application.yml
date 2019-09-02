@@ -1,0 +1,28 @@
+server:
+  port: 8088
+
+## 配置数据源
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+
+## 开启驼峰
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com:
+      fam:
+        wang:
+          springboot:
+            mapper: debug
+
+## 打开自动配置报告
+debug: true
